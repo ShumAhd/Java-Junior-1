@@ -26,5 +26,17 @@ public class StreamExample {
         .max(Integer::compareTo)
         .orElseThrow(() -> new IllegalStateException("Список пуст"));
   }
+  /**
+   * Умножает на 5, отнимает 150 и суммирует числа, большие чем 500000.
+   *
+   * @param numbers Список чисел.
+   * @return Результат вычислений.
+   */
+  public static int processNumbers(List<Integer> numbers) {
+    return numbers.stream()
+        .filter(num -> num > 500000)
+        .mapToInt(num -> num * 5 - 150)
+        .sum();
+  }
 
 }
