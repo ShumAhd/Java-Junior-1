@@ -25,6 +25,8 @@
 
 Количество чисел с квадратом меньше 100000: 0
 ```
+---
+---
 
 ### Задание
 1. Создать класс Employee (Сотрудник) с полями: String name, int age, double salary, String department
