@@ -49,5 +49,21 @@ public class StreamExample {
         .filter(num -> Math.pow(num, 2) < 100000)
         .count();
   }
+  public static void main(String[] args) {
+    // Генерация списка рандомных чисел
+    List<Integer> randomNumbers = generateRandomNumbers();
+
+    // Нахождение максимального числа
+    int maxNumber = findMax(randomNumbers);
+    System.out.println("Максимальное число: " + maxNumber);
+
+    // Выполнение операций с числами, большими чем 500000
+    int result = processNumbers(randomNumbers);
+    System.out.println("Результат операций: " + result);
+
+    // Нахождение количества чисел, квадрат которых меньше чем 100000
+    long count = countSquaresLessThan100000(randomNumbers);
+    System.out.println("Количество чисел с квадратом меньше 100000: " + count);
+  }
 
 }
