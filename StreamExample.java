@@ -15,5 +15,16 @@ public class StreamExample {
         .boxed()
         .collect(Collectors.toList());
   }
+  /**
+   * Находит максимальное число в списке.
+   *
+   * @param numbers Список чисел.
+   * @return Максимальное число.
+   */
+  public static int findMax(List<Integer> numbers) {
+    return numbers.stream()
+        .max(Integer::compareTo)
+        .orElseThrow(() -> new IllegalStateException("Список пуст"));
+  }
 
 }
