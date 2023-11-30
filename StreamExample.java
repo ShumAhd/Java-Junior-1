@@ -38,5 +38,16 @@ public class StreamExample {
         .mapToInt(num -> num * 5 - 150)
         .sum();
   }
+  /**
+   * Находит количество чисел, квадрат которых меньше чем 100000.
+   *
+   * @param numbers Список чисел.
+   * @return Количество чисел, удовлетворяющих условию.
+   */
+  public static long countSquaresLessThan100000(List<Integer> numbers) {
+    return numbers.stream()
+        .filter(num -> Math.pow(num, 2) < 100000)
+        .count();
+  }
 
 }
